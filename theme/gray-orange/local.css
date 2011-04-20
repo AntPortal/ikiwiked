@@ -272,6 +272,20 @@ div.titleandtags {
   div.titleandtags div.lastmodified {
     flaot: right; }
 
+thead th {
+  color: white;
+  background-color: gray;
+  padding: .5em; }
+
+td {
+  padding: .2em .4em; }
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2; }
+
+tr:nth-child(even) {
+  background-color: #d9d9d9; }
+
 /* Don't know what these last two do but leaving those there just in case*/
 .pagecloud {
   width: auto;
