@@ -1,0 +1,30 @@
+# Instructions
+
+Feel free to post your ideas for TODOs here. If it seems more like a bug in the existing code, post it to [[bugs]] instead. Useful commands that can be put inside the TODOs: 
+
+[[!template id=note text="By default, TODOs that don't have a priority tag are classified as [[priority/low]]."]]
+
+- Link items to [[todo/done]] when done by inserting \[[done]] 
+- Link items to appropriate [[owner]] when assigning a todo by inserting, for example, \[[!tag owner/arlolra]] 
+- Link items to appropriate priority levels ([[priority/high]], [[priority/medium]], [[priority/low]]) by inserting, for example, \[[!tag priority/medium]]
+
+There are 
+[[!pagecount pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done)"]] 
+TODOs that are not done, of which 
+[[!pagecount pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and !link(owner/*)"]] 
+haven't been assigned to anyone yet.
+
+[[!inline pages="" postform=yes postformtext="Add a TODO item:" rootpage="todo"]]
+
+# Unassigned TODOs
+[[!inline pages="todo/* and !todo/owner/* and !todo/priority/* and  !todo/done and !link(todo/done) and !link(owner/*)" show=0 archive=yes template=titleandtags sort=-mtime]]
+
+# Assigned TODOs
+## High Priority ([[!pagecount pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and link(owner/*) and link(priority/high)"]])
+[[!inline pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and link(owner/*) and link(priority/high)" show=0 archive=yes template=titleandtags sort=-mtime]]
+
+## Medium Priority ([[!pagecount pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and link(owner/*) and link(priority/medium)"]])
+[[!inline pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and link(owner/*) and link(priority/medium)" show=0 archive=yes template=titleandtags sort=-mtime]]
+
+## Low Priority ([[!pagecount pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and link(owner/*) and !link(priority/medium) and !link(priority/high)"]])
+[[!inline pages="todo/* and !todo/owner/* and !todo/priority/* and !todo/done and !link(todo/done) and link(owner/*) and !link(priority/high) and !link(priority/medium)" show=0 archive=yes template=titleandtags sort=-mtime]]
