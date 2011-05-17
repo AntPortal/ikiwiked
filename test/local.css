@@ -1,5 +1,5 @@
 /*********************************
- *  public wiki theme for ikiwiki
+ *  rndtaxcredit theme for ikiwiki
  *
  * by Danny Castonguay
  *********************************/
@@ -13,13 +13,12 @@
  * ## alpha
  * 0% is opaque, 100% is transparent
  *  */
-/* variables copy pasted from the corporate website */
 .pageheader {
   padding: 2em 2em 3em 2em;
   position: relative;
   overflow: hidden;
-  background: #404040;
-  border-color: gray;
+  background: #f2f7ed;
+  border-color: #cccccc;
   border-style: none none solid none;
   border-width: 1px; }
 
@@ -27,23 +26,21 @@
   float: left; }
 
 .title {
-  color: #b3b3b3;
+  color: #1a260d; }
+
+.title, h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  color: gray; }
-
 .header {
-  font-size: 200%; }
+  font-size: 150%; }
 
 h1 {
   font-size: 160%;
-  border-top: 5px solid gray; }
+  border-top: 5px solid #cccccc; }
 
 h2 {
   font-size: 130%;
-  border-top: 2px solid gray; }
+  border-top: 2px solid #cccccc; }
 
 h3, h4, h5, h6 {
   font-size: 110%; }
@@ -57,8 +54,8 @@ input#searchbox {
   border: none;
   padding: .5em;
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -87,16 +84,16 @@ input#searchbox {
   margin: 0.2em;
   padding: 0.2em;
   font-size: 1.01em;
-  background: gray;
-  color: black;
+  background: #e6e6e6;
+  color: #136c13;
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px; }
   .pageheader .actions ul li a:hover, input[type="submit"]:hover {
-    background: #e68019;
+    background: #1fad1f;
     color: white; }
 
 div.toggleable#attachments {
@@ -105,7 +102,7 @@ div.toggleable#attachments {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Helvetica", "Arial", "Verdana", "sans-serif";
+  font-family: helvetica,arial,freesans,clean,sans-serif;
   *font-size: small;
   color: black;
   background: white;
@@ -113,26 +110,26 @@ body {
 
 a {
   text-decoration: none;
-  color: #f27f0d; }
+  color: #136c13; }
 
 a:hover {
-  color: #ad661f; }
+  color: #1fad1f; }
 
 hr {
   border-style: none;
-  background-color: gray;
+  background-color: #cccccc;
   height: 1px; }
 
 code, pre {
   background-color: #f2f2f2;
-  color: #2e1a05; }
+  color: #1a2e05; }
 
 pre {
   padding: .5em;
   margin: 1em;
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -144,7 +141,7 @@ pre {
   margin: 1em 2em; }
 
 #pageinfo {
-  border-color: gray; }
+  border-color: #cccccc; }
 
 #editcontent, #editmessage {
   width: 90%;
@@ -154,8 +151,8 @@ pre {
   line-height: 1.4em;
   padding: .5em;
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px; }
@@ -175,11 +172,11 @@ label[for="editmessage"] {
   margin: .4em 0;
   padding: .4em 0;
   border-style: none;
-  border-top: 1px solid gray; }
+  border-top: 1px solid #cccccc; }
 
 .inlineheader {
   font-size: 1.1em;
-  border-top: 2px solid gray; }
+  border-top: 2px solid #cccccc; }
 
 /* Smaller headings for inline pages */
 .inlinepage h1 {
@@ -197,22 +194,20 @@ div.recentchanges {
 /* recent change page */
 div.recentchanges {
   background-color: white; }
-  div.recentchanges div.metadata {
-    margin-top: 1.5em;
-    border-style: solid;
-    border-width: 2px;
-    border-color: gray;
-    -webkit-border-top-left-radius: 4px;
-    -webkit-border-top-right-radius: 4px;
-    -moz-border-radius-topleft: 4px;
-    -moz-border-radius-topright: 4px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-style: solid solid none solid;
-    background-color: #f2f2f2;
-    padding: .7em; }
-  div.recentchanges div.changelog {
-    padding: .7em 2em; }
+
+div.metadata {
+  margin-top: 1.5em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-style: solid solid none solid;
+  background-color: #f2f2f2; }
 
 div.recentchanges div.metadata *, span.pagelinks a {
   float: none;
@@ -228,19 +223,19 @@ span.pagelinks a, span.tags a {
   background: #e6e6e6;
   color: black;
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px; }
   span.pagelinks a:hover, span.tags a:hover {
     background: #cccccc;
-    color: black; }
+    color: #1a260d; }
 
 div.recentchanges div.changelog {
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -webkit-border-bottom-left-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-bottomleft: 4px;
@@ -255,22 +250,22 @@ span.desc br {
 
 div.titleandtags {
   border-style: solid;
-  border-width: 2px;
-  border-color: gray;
+  border-width: 1px;
+  border-color: #cccccc;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background-color: #f2f2f2;
-  margin-top: 1.5em;
-  padding: .8em; }
+  margin-top: .5em;
+  padding: .4em; }
   div.titleandtags h3, div.titleandtags span.tags {
     padding: 0; }
   div.titleandtags h3 {
-    margin: 0 0 .5em 0; }
+    margin: 0 0 .2em 0; }
   div.titleandtags span.tags {
     line-height: 2em; }
   div.titleandtags div.lastmodified {
-    flaot: right; }
+    float: right; }
 
 thead th {
   color: white;

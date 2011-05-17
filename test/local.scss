@@ -1,0 +1,336 @@
+/*********************************
+ *  rndtaxcredit theme for ikiwiki
+ *
+ * by Danny Castonguay
+ *********************************/
+/* # HSLA(hue, saturation, lightness,alpha)
+ * ## hue
+ * R:0, O:30, Y:60, G:115, cyan:180, B:220, I:260, V:280, pink:300
+ * ## saturation
+ * 0% is gray, 100% is pure color
+ * ## lightness
+ * 0% is black, 100% is white
+ * ## alpha
+ * 0% is opaque, 100% is transparent
+ *  */
+$header_bg_clr: hsl(90,40%,95%);
+$title_txt_clr: hsl(90,50%,10%);
+$title_action_bg_clr: hsl(90,0%,90%);
+$title_action_bg_hover: hsl(120,70%,40%);
+$body_txt_clr: black;
+$body_bg_clr: hsl(90,50%,100%);
+$border_clr: hsl(0,0,80%);
+$pre_bg_clr: hsl(0,0,95%);
+$pre_txt_clr: hsl(90,80%,10%);
+$a_txt_clr: hsl(120,70%,25%);
+$a_hover_clr: hsl(120,70%,40%);
+$text_area_bg_clr: hsl(0,0,95%);
+$text_area_bg_hover: hsl(0,0,100%);
+$pagelinks_bg_clr: hsl(0,0,90%);
+$pagelinks_txt_clr: black;
+$pagelinks_bg_hover: hsl(0,0,80%);
+$pagelinks_txt_hover: $title_txt_clr;
+$recentchanges_item_bg_clr: hsl(0,0,95%);
+
+$corner_radius: 4px;
+
+@mixin rounded_top {
+	border-style: solid;
+	border-width: 1px;
+	border-color: $border_clr;
+	-webkit-border-top-left-radius: $corner_radius;
+	-webkit-border-top-right-radius: $corner_radius;
+	-moz-border-radius-topleft: $corner_radius;
+	-moz-border-radius-topright: $corner_radius;
+	border-top-left-radius: $corner_radius;
+	border-top-right-radius: $corner_radius;
+}
+
+@mixin rounded_bottom {
+	border-style: solid;
+	border-width: 1px;
+	border-color: $border_clr;
+	-webkit-border-bottom-left-radius: $corner_radius;
+	-webkit-border-bottom-right-radius: $corner_radius;
+	-moz-border-radius-bottomleft: $corner_radius;
+	-moz-border-radius-bottomright: $corner_radius;
+	border-bottom-left-radius: $corner_radius;
+	border-bottom-right-radius: $corner_radius;
+}
+
+@mixin rounded_corners {
+	border-style: solid;
+	border-width: 1px;
+	border-color: $border_clr;
+	-moz-border-radius: $corner_radius;
+	-webkit-border-radius: $corner_radius;
+	border-radius:$corner_radius;
+}
+
+@mixin box_shadow_inset {
+	$shadow: 2px 2px 2px hsl(0,0,10%);
+	-moz-box-shadow: inset $shadow;
+	-webkit-box-shadow: inset $shadow;
+	box-shadow: inset $shadow;
+}
+
+@mixin box_shadow {
+	$shadow: 0px 0px 2px hsl(0,0,10%);
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin rounded_shape($margin,$padding,$font-size,$bg_clr,$txt_clr, $bg_hover,$txt_hover) {
+	margin: $margin;
+	padding: $padding;
+	font-size: $font-size;
+	background: $bg_clr;
+	color: $txt_clr;
+	@include rounded_corners;
+	&:hover {
+		background: $bg_hover;
+		color: $txt_hover;
+	}
+}
+
+.pageheader {
+	padding: 2em 2em 3em 2em;
+	position: relative;
+	overflow: hidden;
+	background: $header_bg_clr;
+	border-color: $border_clr;
+	border-style: none none solid none;
+	border-width: 1px;
+}
+
+.pageheader .header {
+	float: left;
+}
+
+.title {
+	color: $title_txt_clr;
+}
+
+.title, h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+.header { font-size: 150% }
+h1 { 
+	font-size: 160%;
+	border-top: 5px solid $border_clr	
+}
+h2 { 
+	font-size: 130%;
+	border-top: 2px solid $border_clr
+}
+h3, h4, h5, h6 { font-size: 110%}
+
+#searchform {
+	position: absolute;
+	top: 0.5em;
+	right: 2em;
+}
+
+input#searchbox {
+	border: none;
+	padding: .5em;
+	@include rounded_corners;
+	@include box_shadow_inset;
+}
+
+.pageheader .actions {
+	position: absolute;
+	bottom: 0;
+	right: 2em;
+	width: 100%;
+	text-align: right;
+}
+
+.pageheader .actions ul {
+	border-style: none
+}
+
+.actions ul {
+	padding: 1em;
+	border-style: none;
+}
+
+.pageheader .actions ul li {
+	padding: 0;
+}
+.pageheader .actions ul li a, input[type="submit"] {
+	@include rounded_shape(.2em,.2em,1.01em,$title_action_bg_clr,$a_txt_clr,$title_action_bg_hover, white);
+}
+
+div.toggleable#attachments {
+	margin: 1em;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: helvetica,arial,freesans,clean,sans-serif;
+	*font-size:small;
+	color: $body_txt_clr;
+	background: $body_bg_clr;
+	font-size: 1.01em;
+}
+
+a {
+	text-decoration:none;
+	color: $a_txt_clr;
+}
+
+a:hover {
+	color: $a_hover_clr;
+}
+
+hr {
+	border-style: none;
+	background-color: $border_clr;
+	height: 1px;
+}
+
+code, pre {
+	background-color: $pre_bg_clr;
+	color: $pre_txt_clr;
+}
+
+pre {
+	padding: .5em;
+	margin: 1em;
+	@include rounded_corners;
+	@include box_shadow;
+}
+
+#content, #comments, #footer {
+	margin: 1em 2em;
+}
+
+#pageinfo {
+	border-color: $border_clr;
+}
+
+#editcontent, #editmessage {
+	width: 90%;
+    background: $text_area_bg_clr;
+    font-size: 1.01em;
+    font-family: Consolas, Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+    line-height: 1.4em;
+    padding: .5em;
+	@include rounded_corners;	
+	&:hover {
+		background: $text_area_bg_hover;
+	}
+}
+
+#editcontent {
+    height: 25em;	
+}
+
+label[for="editmessage"] {
+	margin-top: 1em;
+}
+
+#editmessage {
+	margin-bottom: 1em;
+}
+
+.inlinepage {
+	margin: .4em 0;
+	padding: .4em 0;
+	border-style: none;
+	border-top: 1px solid $border_clr;
+}
+
+.inlineheader {
+	font-size: 1.1em;
+	border-top: 2px solid $border_clr;
+}
+
+/* Smaller headings for inline pages */
+.inlinepage h1 { font-size: 1.1em }
+.inlinepage h2 { font-size: 1.01em }
+.inlinepage h3 { font-size: 1.01em }
+
+div.recentchanges {
+	border-style: none;
+}
+
+/* recent change page */
+div.recentchanges {
+	background-color: $body_bg_clr;
+}
+div.metadata {
+	margin-top: 1.5em;
+	@include rounded_top;
+	border-style: solid solid none solid;
+	background-color: $recentchanges_item_bg_clr;
+}
+
+div.recentchanges div.metadata *, span.pagelinks a {
+	float: none;
+	display: block;
+}
+
+span.pagelinks {
+	width: inherit !important;
+}
+span.pagelinks a, span.tags a {
+	@include rounded_shape(.2em,.2em,1.01em,
+		$pagelinks_bg_clr,$pagelinks_txt_clr,$pagelinks_bg_hover,$pagelinks_txt_hover);
+}
+
+div.recentchanges div.changelog {
+	@include rounded_bottom;
+	border-style: none solid solid solid;
+	background-color: $recentchanges_item_bg_clr !important;
+}
+
+span.desc br {
+	display: none !important;
+}
+
+div.titleandtags {
+    @include rounded_corners;
+	background-color: $recentchanges_item_bg_clr;
+	margin-top: .5em;
+	padding: .4em;
+	h3, span.tags {
+	   padding: 0;       
+	}
+    h3 { margin:0 0 .2em 0; }
+	span.tags { line-height: 2em; }
+    div.lastmodified {
+	   float: right;
+	}
+}
+
+thead th {
+    color:white;
+      background-color:hsl(0,0,50%);
+        padding: .5em;
+}
+
+td { 
+  padding:.2em .4em; 
+}
+
+tr:nth-child(odd)		{ background-color:hsl(0,0,95%); }
+tr:nth-child(even)		{ background-color:hsl(0,0,85%); }
+
+/* Don't know what these last two do but leaving those there just in case*/
+.pagecloud {
+	width: auto;
+	border-color: red;
+}
+
+.sidebar {
+    border-bottom: 0;
+	border-right: 0;
+	border-top: 0;
+	margin-top: 0.5em;
+	padding: 0 0 0 2ex;
+	border-color: red;
+}
