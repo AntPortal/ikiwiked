@@ -295,16 +295,15 @@ span.desc br {
 div.titleandtags {
     @include rounded_corners;
 	background-color: $recentchanges_item_bg_clr;
-	margin-top: 1.5em;
-	padding: .8em;
+	margin-top: .5em;
+	padding: .4em;
 	h3, span.tags {
-	   padding: 0;
-	  
+	   padding: 0;       
 	}
-    h3 { margin:0 0 .5em 0; }
+    h3 { margin:0 0 .2em 0; }
 	span.tags { line-height: 2em; }
     div.lastmodified {
-	   flaot: right;
+	   float: right;
 	}
 }
 
