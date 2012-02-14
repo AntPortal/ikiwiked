@@ -327,7 +327,8 @@ tr:nth-child(even)		{ background-color:hsl(0,0,85%); }
 }
 
 .sidebar {
-    border-bottom: 0;
+        width: 28ex;
+        border-bottom: 0;
 	border-right: 0;
 	border-top: 0;
 	margin-top: 0.5em;

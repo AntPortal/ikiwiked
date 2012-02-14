@@ -292,6 +292,7 @@ tr:nth-child(even) {
   border-color: red; }
 
 .sidebar {
+  width: 28ex;
   border-bottom: 0;
   border-right: 0;
   border-top: 0;
