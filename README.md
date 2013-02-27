@@ -2,7 +2,7 @@
 
 
 
-A collection of themes, templates, and wiki directive pages for [[ikiwiki|http://ikiwiki.info]]. For an example of the theme, look at [[https://antportal.com/wiki]]
+A collection of themes, templates, and wiki directive pages for [ikiwiki](http://ikiwiki.info). For an example of the theme, look at [antportal](https://antportal.com/wiki)
 
 
 ##Content
@@ -10,14 +10,14 @@ A collection of themes, templates, and wiki directive pages for [[ikiwiki|http:/
 
 ### Templates
 
-Directory containing templates that are not shipped with ikiwiki. We use this template to manage our TODOs (as an issue tracker, see [[http://ikiwiki.info/tips/integrated_issue_tracking_with_ikiwiki/]] for justification).
+Directory containing templates that are not shipped with ikiwiki. We use this template to manage our TODOs (as an issue tracker, see [ikiwiki issue tracker](http://ikiwiki.info/tips/integrated_issue_tracking_with_ikiwiki/]] for justification)).
 
 ### Theme
 
-Directory containing themes (both [[SASS|http://sass-lang.com/]] files and complied CSS, the last one for convenience only). 
+Directory containing themes (both [SASS](http://sass-lang.com/) files and complied CSS, the last one for convenience only). 
 
-local.css is the modified version that makes ikiwiki look better (in my humble opinion).
-local.scss is the source file used (see [[http://sass-lang.com/]] how to obtain the compiler).
+local.css is the modified version that makes ikiwiki look better (in my opinion).
+local.scss is the source file used (see [sass](http://sass-lang.com/) how to obtain the compiler).
 
 ### Test
 
@@ -28,7 +28,7 @@ Directory containing an example that can be used to tweak/configure your own the
 
 
 
-The bare minimum is given here. For a much more indepth and comprehensive installation instructions got the source: [[http://ikiwiki.info]].
+The bare minimum is given here. For a much more indepth and comprehensive installation instructions got the source: [ikiwiki](http://ikiwiki.info).
 
 ###Templates
 
@@ -36,7 +36,7 @@ Move the template to your template directory. For example,
 
      <pre>/usr/share/ikiwiki/templates/titleandtags.tmpl</pre>
 
-For template usage, see [[http://ikiwiki.info/ikiwiki/directive/template/]].
+For template usage, see [ikiwiki templates](http://ikiwiki.info/ikiwiki/directive/template/).
 
 ###Theme
 
