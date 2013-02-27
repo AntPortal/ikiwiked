@@ -34,7 +34,7 @@ The bare minimum is given here. For a much more indepth and comprehensive instal
 
 Move the template to your template directory. For example,
 
-     <pre>/usr/share/ikiwiki/templates/titleandtags.tmpl</pre>
+     /usr/share/ikiwiki/templates/titleandtags.tmpl
 
 For template usage, see [ikiwiki templates](http://ikiwiki.info/ikiwiki/directive/template/).
 
